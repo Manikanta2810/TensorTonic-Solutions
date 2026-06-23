@@ -6,5 +6,6 @@ def ridge_regression(X, y, lam):
     X = np.asarray(X)
     n=X.shape[1]
     y = np.asarray(y)
-    w = np.linalg.inv(X.T @ X + lam * np.eye(n)) @ X.T @ y
+    w = np.linalg.inv(X.T@X+lam*np.eye(n))@(X.T@y)
     return w
+                      
